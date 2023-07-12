@@ -53,7 +53,7 @@ public class PodcastService {
         CreatePodcastDto createdPodcast = new CreatePodcastDto();
         createdPodcast.setName(podcast.getName());
         createdPodcast.setPublisher(podcast.getPublisher());
-        return createPodcastDto;
+        return createdPodcast;
     }
 
     public PodcastDto getPodcastByName(String podcastName) {
