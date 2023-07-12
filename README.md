@@ -40,6 +40,12 @@ sudo mvn spring-boot:build-image -Dspring-boot.build-image.imageName=podcasts.co
 
 **Note!** The `GET` endpoints that return collections have pagination.
 
+Create a podcast:
+
+```sh
+curl --header "Content-Type: application/json" --request POST --data '{"name": "My Diaries", "publisher": "N"}' -u user localhost:8080/api/podcast
+```
+
 Get episodes for a podcast:
 
 ```sh
@@ -55,7 +61,7 @@ curl -H "Content-Type: application/json" -d '{"title": "#1 - The Begginning", "p
 Get podcasts:
 
 ```sh
-curl -X GET -i -u user localhost:8080/api/podcasts
+curl -X GET -u user localhost:8080/api/podcasts
 ```
 
 Get podcast by id:
