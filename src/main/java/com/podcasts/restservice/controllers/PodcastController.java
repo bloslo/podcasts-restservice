@@ -36,7 +36,7 @@ public class PodcastController {
     }
 
     @GetMapping("/podcast/{id}")
-    PodcastDto getPodcastByName(@PathVariable Long id) {
+    PodcastDto getPodcastById(@PathVariable Long id) {
         return podcastService.getPodcastById(id);
     }
 
